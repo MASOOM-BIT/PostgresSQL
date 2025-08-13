@@ -19,3 +19,8 @@ DROP TABLE IF EXISTS table_name;
 SELECT table_name
 FROM information_schema.tables
 WHERE table_schema = 'public';
+
+-- Describe a table in PostgreSQL (show columns and their details)
+SELECT column_name, data_type, is_nullable, column_default
+FROM information_schema.columns
+WHERE table_name = 'your_table_name' AND table_schema = 'public';
